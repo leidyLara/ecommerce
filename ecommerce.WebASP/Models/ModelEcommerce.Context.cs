@@ -13,10 +13,10 @@ namespace ecommerce.WebASP.Models
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class ecommerceEntities : DbContext
+    public partial class BDecommerceCarrito : DbContext
     {
-        public ecommerceEntities()
-            : base("name=ecommerceEntities")
+        public BDecommerceCarrito()
+            : base("name=BDecommerceCarrito")
         {
         }
     

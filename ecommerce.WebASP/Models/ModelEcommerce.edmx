@@ -564,7 +564,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="ecommerceEntities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="BDecommerceCarrito" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="TBL_CATEGORIA" EntityType="Self.TBL_CATEGORIA" />
           <EntitySet Name="TBL_CLIENTE" EntityType="Self.TBL_CLIENTE" />
           <EntitySet Name="TBL_DET_IMP" EntityType="Self.TBL_DET_IMP" />
@@ -617,7 +617,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="ecommerceModelStoreContainer" CdmEntityContainer="ecommerceEntities">
+        <EntityContainerMapping StorageEntityContainer="ecommerceModelStoreContainer" CdmEntityContainer="BDecommerceCarrito">
           <EntitySetMapping Name="TBL_CATEGORIA">
             <EntityTypeMapping TypeName="ecommerceModel.TBL_CATEGORIA">
               <MappingFragment StoreEntitySet="TBL_CATEGORIA">
