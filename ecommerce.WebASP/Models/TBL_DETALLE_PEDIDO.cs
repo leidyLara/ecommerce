@@ -26,8 +26,8 @@ namespace ecommerce.WebASP.Models
         public Nullable<int> PEDI_ID { get; set; }
         public Nullable<decimal> DEP_CAN { get; set; }
         public string DEP_DESC { get; set; }
-        public Nullable<float> DEPPRECIO_UNITARIO { get; set; }
-        public Nullable<float> DEP_PRECIO_TT { get; set; }
+        public Nullable<decimal> DEP_PRECIO_UNITARIO { get; set; }
+        public Nullable<decimal> DEP_PRECIO_TT { get; set; }
         public string DEP_ESTADO { get; set; }
         public System.DateTime DEP_ADD { get; set; }
     

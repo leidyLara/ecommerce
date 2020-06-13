@@ -28,8 +28,8 @@ namespace ecommerce.WebASP.Models
         public string PEDI_NUMERO { get; set; }
         public string PEDI_DIRECCION { get; set; }
         public string PEDI_TELEFONO { get; set; }
-        public Nullable<float> PEDI_SUBTOTAL { get; set; }
-        public Nullable<float> PEDI_TOTAL { get; set; }
+        public Nullable<decimal> PEDI_SUBTOTAL { get; set; }
+        public Nullable<decimal> PEDI_TOTAL { get; set; }
         public string PEDI_ESTADO { get; set; }
         public System.DateTime PEDI_ADD { get; set; }
     

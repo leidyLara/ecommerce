@@ -132,6 +132,18 @@
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="icons\guardar.png" />
+    <Content Include="icons\nuevo.png" />
+    <Content Include="Models\ModelEcommerce.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelEcommerce.edmx</DependentUpon>
+      <LastGenOutput>ModelEcommerce.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\ModelEcommerce.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelEcommerce.edmx</DependentUpon>
+      <LastGenOutput>ModelEcommerce.cs</LastGenOutput>
+    </Content>
     <Content Include="UserControl\ucCategoria.ascx" />
     <Content Include="WebForms\Administrador\Producto\wfmProductoLista.aspx" />
     <Content Include="WebForms\Administrador\Producto\wfmProductoNuevo.aspx" />
@@ -143,16 +155,6 @@
       <DependentUpon>ModelEcommerce.edmx</DependentUpon>
     </Content>
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
-    <Content Include="Models\ModelEcommerce.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>ModelEcommerce.edmx</DependentUpon>
-      <LastGenOutput>ModelEcommerce.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="Models\ModelEcommerce.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>ModelEcommerce.edmx</DependentUpon>
-      <LastGenOutput>ModelEcommerce.cs</LastGenOutput>
-    </Content>
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />

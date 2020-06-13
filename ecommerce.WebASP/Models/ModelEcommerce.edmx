@@ -42,7 +42,7 @@
           <Property Name="DEPIMP_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="DEP_ID" Type="int" />
           <Property Name="IMP_ID" Type="int" />
-          <Property Name="DEPIMP_VALOR" Type="real" />
+          <Property Name="DEPIMP_VALOR" Type="decimal" Precision="8" Scale="4" />
           <Property Name="DEPIMP_ESTADO" Type="char" MaxLength="1" />
           <Property Name="DEPIMP_ADD" Type="datetime" Nullable="false" />
         </EntityType>
@@ -56,8 +56,8 @@
           <Property Name="PEDI_ID" Type="int" />
           <Property Name="DEP_CAN" Type="numeric" Precision="10" Scale="0" />
           <Property Name="DEP_DESC" Type="varchar" MaxLength="200" />
-          <Property Name="DEPPRECIO_UNITARIO" Type="real" />
-          <Property Name="DEP_PRECIO_TT" Type="real" />
+          <Property Name="DEP_PRECIO_UNITARIO" Type="decimal" Precision="8" Scale="4" />
+          <Property Name="DEP_PRECIO_TT" Type="decimal" Precision="8" Scale="4" />
           <Property Name="DEP_ESTADO" Type="char" MaxLength="1" />
           <Property Name="DEP_ADD" Type="datetime" Nullable="false" />
         </EntityType>
@@ -104,7 +104,7 @@
           <Property Name="PEDI_ID" Type="int" />
           <Property Name="FPA_ID" Type="int" />
           <Property Name="PAG_FECHA" Type="datetime" />
-          <Property Name="PAG_VALOR" Type="real" />
+          <Property Name="PAG_VALOR" Type="decimal" Precision="8" Scale="4" />
           <Property Name="PAG_ESTADO" Type="char" MaxLength="1" />
           <Property Name="PAG_ADD" Type="datetime" Nullable="false" />
         </EntityType>
@@ -119,8 +119,8 @@
           <Property Name="PEDI_NUMERO" Type="varchar" MaxLength="100" />
           <Property Name="PEDI_DIRECCION" Type="varchar" MaxLength="150" />
           <Property Name="PEDI_TELEFONO" Type="varchar" MaxLength="12" />
-          <Property Name="PEDI_SUBTOTAL" Type="real" />
-          <Property Name="PEDI_TOTAL" Type="real" />
+          <Property Name="PEDI_SUBTOTAL" Type="decimal" Precision="8" Scale="4" />
+          <Property Name="PEDI_TOTAL" Type="decimal" Precision="8" Scale="4" />
           <Property Name="PEDI_ESTADO" Type="char" MaxLength="1" />
           <Property Name="PEDI_ADD" Type="datetime" Nullable="false" />
         </EntityType>
@@ -132,12 +132,12 @@
           <Property Name="CAT_ID" Type="int" />
           <Property Name="PRO_CODIGO" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="PRO_NOMBRE" Type="varchar" MaxLength="100" />
-          <Property Name="PRO_PRECIO_COMPRA" Type="real" />
-          <Property Name="PREO_PRECIO_VENTA" Type="real" />
-          <Property Name="PTO_IMAGEN" Type="varchar" MaxLength="200" />
+          <Property Name="PRO_PRECIO_COMPRA" Type="decimal" Precision="8" Scale="4" />
+          <Property Name="PRO_PRECIO_VENTA" Type="decimal" Precision="8" Scale="4" />
+          <Property Name="PRO_IMAGEN" Type="varchar" MaxLength="200" />
           <Property Name="PRO_DESC" Type="varchar" MaxLength="200" />
-          <Property Name="PRO_STOCKMINIMO" Type="smallint" />
-          <Property Name="PRO_STOCKMAXIMO" Type="smallint" />
+          <Property Name="PRO_STOCKMINIMO" Type="varchar" MaxLength="100" />
+          <Property Name="PRO_STOCKMAXIMO" Type="varchar" MaxLength="100" />
           <Property Name="PRO_ESTADO" Type="char" MaxLength="1" />
           <Property Name="PRO_ADD" Type="datetime" Nullable="false" />
         </EntityType>
@@ -342,7 +342,7 @@
           <Property Name="DEPIMP_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="DEP_ID" Type="Int32" />
           <Property Name="IMP_ID" Type="Int32" />
-          <Property Name="DEPIMP_VALOR" Type="Single" />
+          <Property Name="DEPIMP_VALOR" Type="Decimal" Precision="8" Scale="4" />
           <Property Name="DEPIMP_ESTADO" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
           <Property Name="DEPIMP_ADD" Type="DateTime" Nullable="false" Precision="3" />
           <NavigationProperty Name="TBL_DETALLE_PEDIDO" Relationship="Self.FK_TBL_DET__RELATIONS_TBL_DETA" FromRole="TBL_DET_IMP" ToRole="TBL_DETALLE_PEDIDO" />
@@ -358,8 +358,8 @@
           <Property Name="PEDI_ID" Type="Int32" />
           <Property Name="DEP_CAN" Type="Decimal" Precision="10" Scale="0" />
           <Property Name="DEP_DESC" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
-          <Property Name="DEPPRECIO_UNITARIO" Type="Single" />
-          <Property Name="DEP_PRECIO_TT" Type="Single" />
+          <Property Name="DEP_PRECIO_UNITARIO" Type="Decimal" Precision="8" Scale="4" />
+          <Property Name="DEP_PRECIO_TT" Type="Decimal" Precision="8" Scale="4" />
           <Property Name="DEP_ESTADO" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
           <Property Name="DEP_ADD" Type="DateTime" Nullable="false" Precision="3" />
           <NavigationProperty Name="TBL_DET_IMP" Relationship="Self.FK_TBL_DET__RELATIONS_TBL_DETA" FromRole="TBL_DETALLE_PEDIDO" ToRole="TBL_DET_IMP" />
@@ -412,7 +412,7 @@
           <Property Name="PEDI_ID" Type="Int32" />
           <Property Name="FPA_ID" Type="Int32" />
           <Property Name="PAG_FECHA" Type="DateTime" Precision="3" />
-          <Property Name="PAG_VALOR" Type="Single" />
+          <Property Name="PAG_VALOR" Type="Decimal" Precision="8" Scale="4" />
           <Property Name="PAG_ESTADO" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
           <Property Name="PAG_ADD" Type="DateTime" Nullable="false" Precision="3" />
           <NavigationProperty Name="TBL_FORMA_PAGO" Relationship="Self.FK_TBL_PAGO_RELATIONS_TBL_FORM" FromRole="TBL_PAGOS" ToRole="TBL_FORMA_PAGO" />
@@ -429,8 +429,8 @@
           <Property Name="PEDI_NUMERO" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
           <Property Name="PEDI_DIRECCION" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
           <Property Name="PEDI_TELEFONO" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
-          <Property Name="PEDI_SUBTOTAL" Type="Single" />
-          <Property Name="PEDI_TOTAL" Type="Single" />
+          <Property Name="PEDI_SUBTOTAL" Type="Decimal" Precision="8" Scale="4" />
+          <Property Name="PEDI_TOTAL" Type="Decimal" Precision="8" Scale="4" />
           <Property Name="PEDI_ESTADO" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
           <Property Name="PEDI_ADD" Type="DateTime" Nullable="false" Precision="3" />
           <NavigationProperty Name="TBL_CLIENTE" Relationship="Self.FK_TBL_PEDI_RELATIONS_TBL_CLIE" FromRole="TBL_PEDIDO" ToRole="TBL_CLIENTE" />
@@ -445,12 +445,12 @@
           <Property Name="CAT_ID" Type="Int32" />
           <Property Name="PRO_CODIGO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="PRO_NOMBRE" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-          <Property Name="PRO_PRECIO_COMPRA" Type="Single" />
-          <Property Name="PREO_PRECIO_VENTA" Type="Single" />
-          <Property Name="PTO_IMAGEN" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="PRO_PRECIO_COMPRA" Type="Decimal" Precision="8" Scale="4" />
+          <Property Name="PRO_PRECIO_VENTA" Type="Decimal" Precision="8" Scale="4" />
+          <Property Name="PRO_IMAGEN" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
           <Property Name="PRO_DESC" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
-          <Property Name="PRO_STOCKMINIMO" Type="Int16" />
-          <Property Name="PRO_STOCKMAXIMO" Type="Int16" />
+          <Property Name="PRO_STOCKMINIMO" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="PRO_STOCKMAXIMO" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
           <Property Name="PRO_ESTADO" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
           <Property Name="PRO_ADD" Type="DateTime" Nullable="false" Precision="3" />
           <NavigationProperty Name="TBL_CATEGORIA" Relationship="Self.FK_TBL_PROD_RELATIONS_TBL_CATE" FromRole="TBL_PRODUCTO" ToRole="TBL_CATEGORIA" />
@@ -671,7 +671,7 @@
                 <ScalarProperty Name="PEDI_ID" ColumnName="PEDI_ID" />
                 <ScalarProperty Name="DEP_CAN" ColumnName="DEP_CAN" />
                 <ScalarProperty Name="DEP_DESC" ColumnName="DEP_DESC" />
-                <ScalarProperty Name="DEPPRECIO_UNITARIO" ColumnName="DEPPRECIO_UNITARIO" />
+                <ScalarProperty Name="DEP_PRECIO_UNITARIO" ColumnName="DEP_PRECIO_UNITARIO" />
                 <ScalarProperty Name="DEP_PRECIO_TT" ColumnName="DEP_PRECIO_TT" />
                 <ScalarProperty Name="DEP_ESTADO" ColumnName="DEP_ESTADO" />
                 <ScalarProperty Name="DEP_ADD" ColumnName="DEP_ADD" />
@@ -754,8 +754,8 @@
                 <ScalarProperty Name="PRO_CODIGO" ColumnName="PRO_CODIGO" />
                 <ScalarProperty Name="PRO_NOMBRE" ColumnName="PRO_NOMBRE" />
                 <ScalarProperty Name="PRO_PRECIO_COMPRA" ColumnName="PRO_PRECIO_COMPRA" />
-                <ScalarProperty Name="PREO_PRECIO_VENTA" ColumnName="PREO_PRECIO_VENTA" />
-                <ScalarProperty Name="PTO_IMAGEN" ColumnName="PTO_IMAGEN" />
+                <ScalarProperty Name="PRO_PRECIO_VENTA" ColumnName="PRO_PRECIO_VENTA" />
+                <ScalarProperty Name="PRO_IMAGEN" ColumnName="PRO_IMAGEN" />
                 <ScalarProperty Name="PRO_DESC" ColumnName="PRO_DESC" />
                 <ScalarProperty Name="PRO_STOCKMINIMO" ColumnName="PRO_STOCKMINIMO" />
                 <ScalarProperty Name="PRO_STOCKMAXIMO" ColumnName="PRO_STOCKMAXIMO" />

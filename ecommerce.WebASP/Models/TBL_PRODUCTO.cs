@@ -24,12 +24,12 @@ namespace ecommerce.WebASP.Models
         public Nullable<int> CAT_ID { get; set; }
         public string PRO_CODIGO { get; set; }
         public string PRO_NOMBRE { get; set; }
-        public Nullable<float> PRO_PRECIO_COMPRA { get; set; }
-        public Nullable<float> PREO_PRECIO_VENTA { get; set; }
-        public string PTO_IMAGEN { get; set; }
+        public Nullable<decimal> PRO_PRECIO_COMPRA { get; set; }
+        public Nullable<decimal> PRO_PRECIO_VENTA { get; set; }
+        public string PRO_IMAGEN { get; set; }
         public string PRO_DESC { get; set; }
-        public Nullable<short> PRO_STOCKMINIMO { get; set; }
-        public Nullable<short> PRO_STOCKMAXIMO { get; set; }
+        public string PRO_STOCKMINIMO { get; set; }
+        public string PRO_STOCKMAXIMO { get; set; }
         public string PRO_ESTADO { get; set; }
         public System.DateTime PRO_ADD { get; set; }
     

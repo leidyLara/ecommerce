@@ -18,7 +18,7 @@ namespace ecommerce.WebASP.Models
         public Nullable<int> PEDI_ID { get; set; }
         public Nullable<int> FPA_ID { get; set; }
         public Nullable<System.DateTime> PAG_FECHA { get; set; }
-        public Nullable<float> PAG_VALOR { get; set; }
+        public Nullable<decimal> PAG_VALOR { get; set; }
         public string PAG_ESTADO { get; set; }
         public System.DateTime PAG_ADD { get; set; }
     

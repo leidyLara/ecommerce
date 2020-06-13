@@ -17,7 +17,7 @@ namespace ecommerce.WebASP.Models
         public int DEPIMP_ID { get; set; }
         public Nullable<int> DEP_ID { get; set; }
         public Nullable<int> IMP_ID { get; set; }
-        public Nullable<float> DEPIMP_VALOR { get; set; }
+        public Nullable<decimal> DEPIMP_VALOR { get; set; }
         public string DEPIMP_ESTADO { get; set; }
         public System.DateTime DEPIMP_ADD { get; set; }
     
