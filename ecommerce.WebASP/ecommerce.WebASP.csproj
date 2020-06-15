@@ -239,19 +239,19 @@
     <Compile Include="Models\TBL_CLIENTE.cs">
       <DependentUpon>ModelEcommerce.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\TBL_DETALLE_PEDIDO.cs">
+    <Compile Include="Models\TBL_DETALLEIMPUESTO.cs">
       <DependentUpon>ModelEcommerce.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\TBL_DET_IMP.cs">
+    <Compile Include="Models\TBL_DETALLEPEDIDO.cs">
       <DependentUpon>ModelEcommerce.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\TBL_DIRECCION.cs">
+    <Compile Include="Models\TBL_DIRECCIONES.cs">
       <DependentUpon>ModelEcommerce.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\TBL_FORMA_PAGO.cs">
+    <Compile Include="Models\TBL_FORMAPAGO.cs">
       <DependentUpon>ModelEcommerce.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\TBL_IMPUESTOS.cs">
+    <Compile Include="Models\TBL_IMPUESTO.cs">
       <DependentUpon>ModelEcommerce.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TBL_PAGOS.cs">
@@ -261,6 +261,12 @@
       <DependentUpon>ModelEcommerce.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TBL_PRODUCTO.cs">
+      <DependentUpon>ModelEcommerce.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TBL_ROL.cs">
+      <DependentUpon>ModelEcommerce.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TBL_USUARIO.cs">
       <DependentUpon>ModelEcommerce.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />

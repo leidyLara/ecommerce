@@ -12,21 +12,22 @@ namespace ecommerce.WebASP.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class TBL_CATEGORIA
+    public partial class TBL_IMPUESTO
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public TBL_CATEGORIA()
+        public TBL_IMPUESTO()
         {
-            this.TBL_PRODUCTO = new HashSet<TBL_PRODUCTO>();
+            this.TBL_DETALLEIMPUESTO = new HashSet<TBL_DETALLEIMPUESTO>();
         }
     
-        public decimal CAT_ID { get; set; }
-        public string CAT_NOMBRE { get; set; }
-        public string CAT_DESCRIPCION { get; set; }
-        public string CAT_STATUS { get; set; }
-        public System.DateTime CAT_FECHACREACION { get; set; }
+        public decimal IMP_ID { get; set; }
+        public string IMP_CODIGOSRI { get; set; }
+        public string IMP_DESCRIPCION_ { get; set; }
+        public Nullable<decimal> IMP_PORCENTAJE { get; set; }
+        public string IMP_STATUS { get; set; }
+        public Nullable<System.DateTime> IMP_FECHACREACION { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<TBL_PRODUCTO> TBL_PRODUCTO { get; set; }
+        public virtual ICollection<TBL_DETALLEIMPUESTO> TBL_DETALLEIMPUESTO { get; set; }
     }
 }

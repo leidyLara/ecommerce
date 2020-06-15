@@ -12,27 +12,25 @@ namespace ecommerce.WebASP.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class TBL_DETALLE_PEDIDO
+    public partial class TBL_DETALLEPEDIDO
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public TBL_DETALLE_PEDIDO()
+        public TBL_DETALLEPEDIDO()
         {
-            this.TBL_DET_IMP = new HashSet<TBL_DET_IMP>();
+            this.TBL_DETALLEIMPUESTO = new HashSet<TBL_DETALLEIMPUESTO>();
         }
     
-        public int DEP_ID { get; set; }
-        public Nullable<int> DEP_COD { get; set; }
-        public Nullable<int> PRO_ID { get; set; }
-        public Nullable<int> PEDI_ID { get; set; }
-        public Nullable<decimal> DEP_CAN { get; set; }
-        public string DEP_DESC { get; set; }
-        public Nullable<decimal> DEP_PRECIO_UNITARIO { get; set; }
-        public Nullable<decimal> DEP_PRECIO_TT { get; set; }
-        public string DEP_ESTADO { get; set; }
-        public System.DateTime DEP_ADD { get; set; }
+        public decimal DEO_CODIGO { get; set; }
+        public Nullable<decimal> PED_ID { get; set; }
+        public Nullable<decimal> PRO_ID { get; set; }
+        public int DEP_CANTIDAD { get; set; }
+        public string DEP_DESCRIPCION { get; set; }
+        public decimal DEP_PRECIOUNITARIO { get; set; }
+        public decimal DEP_PRECIOTOTAL { get; set; }
+        public string DEP_STATUS { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<TBL_DET_IMP> TBL_DET_IMP { get; set; }
+        public virtual ICollection<TBL_DETALLEIMPUESTO> TBL_DETALLEIMPUESTO { get; set; }
         public virtual TBL_PEDIDO TBL_PEDIDO { get; set; }
         public virtual TBL_PRODUCTO TBL_PRODUCTO { get; set; }
     }

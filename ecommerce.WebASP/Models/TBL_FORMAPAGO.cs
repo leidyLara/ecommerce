@@ -12,22 +12,21 @@ namespace ecommerce.WebASP.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class TBL_IMPUESTOS
+    public partial class TBL_FORMAPAGO
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public TBL_IMPUESTOS()
+        public TBL_FORMAPAGO()
         {
-            this.TBL_DET_IMP = new HashSet<TBL_DET_IMP>();
+            this.TBL_PAGOS = new HashSet<TBL_PAGOS>();
         }
     
-        public int IMP_ID { get; set; }
-        public Nullable<float> IMP_PORSENTAJE { get; set; }
-        public string IMP_COD_SRI { get; set; }
-        public string IMP_DESC { get; set; }
-        public string IMP_ESTADO { get; set; }
-        public System.DateTime IMP_ADD { get; set; }
+        public decimal FPA_ID { get; set; }
+        public string FPA_DESCRIPCION_ { get; set; }
+        public string FPA_CODIGOSRI { get; set; }
+        public string FPA_STATUS { get; set; }
+        public Nullable<System.DateTime> FPA_FECHACREACION_ { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<TBL_DET_IMP> TBL_DET_IMP { get; set; }
+        public virtual ICollection<TBL_PAGOS> TBL_PAGOS { get; set; }
     }
 }

@@ -76,7 +76,7 @@
         </tr>
         <tr>
             <td style="width: 187px">Imagen :</td>
-            <td><asp:FileUpload ID="FileUploadProducto" runat="server" onchange="showimagepreview(this)" Height="19px" Width="340px"></asp:FileUpload>
+            <td><asp:FileUpload ID="FileUploadProducto" runat="server" Height="19px" Width="340px"></asp:FileUpload>
             &nbsp;<asp:RequiredFieldValidator ID="RequiredFieldValidator8" ControlToValidate="FileUploadProducto" runat="server" Text="*" ErrorMessage="El campo Imagen es Requerido" style="color: #CC3300"></asp:RequiredFieldValidator>
             </td>
         </tr>
@@ -110,16 +110,4 @@
                 &nbsp;</td>
         </tr>
     </table>
-    <script type="text/javascript">
-        function showimagepreview(input) {
-            if (input.files && input.files[0]) {
-                var reader = new FileReader();
-                reader.onload = function (e) {
-
-                    document.getElementsByTagName("img")[0].setAttribute("src", e.target.result);
-                }
-                reader.readAsDataURL(input.files[0]);
-            }
-        }
-    </script>
 </asp:Content>

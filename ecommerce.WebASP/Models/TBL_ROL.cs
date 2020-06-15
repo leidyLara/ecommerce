@@ -12,21 +12,20 @@ namespace ecommerce.WebASP.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class TBL_FORMA_PAGO
+    public partial class TBL_ROL
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public TBL_FORMA_PAGO()
+        public TBL_ROL()
         {
-            this.TBL_PAGOS = new HashSet<TBL_PAGOS>();
+            this.TBL_USUARIO = new HashSet<TBL_USUARIO>();
         }
     
-        public int FPA_ID { get; set; }
-        public string FPA_DESC { get; set; }
-        public string FPA_COD_SRI { get; set; }
-        public string FPA_ESTADO { get; set; }
-        public System.DateTime FPA_ADD { get; set; }
+        public decimal ROL_ID { get; set; }
+        public string ROL_DESCRIPCION { get; set; }
+        public string ROL_STATUS { get; set; }
+        public Nullable<System.DateTime> ROL_ADD { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<TBL_PAGOS> TBL_PAGOS { get; set; }
+        public virtual ICollection<TBL_USUARIO> TBL_USUARIO { get; set; }
     }
 }

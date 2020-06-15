@@ -17,26 +17,25 @@ namespace ecommerce.WebASP.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public TBL_CLIENTE()
         {
+            this.TBL_DIRECCIONES = new HashSet<TBL_DIRECCIONES>();
             this.TBL_PEDIDO = new HashSet<TBL_PEDIDO>();
         }
     
-        public long CLI_ID { get; set; }
-        public string CLI_PRI_NOM { get; set; }
-        public string CLI_SEG_NOM { get; set; }
-        public string CLI_PRI_APE { get; set; }
-        public string CLI_SEG_APE { get; set; }
-        public string CLI_CORREO { get; set; }
-        public string CLI_FECHA_NAM { get; set; }
-        public string CLI_ESTA_CIVIL { get; set; }
+        public decimal CLI_ID { get; set; }
+        public string CLI_IDENTIFICACION { get; set; }
+        public string CLI_TIPOIDENTIFICACION { get; set; }
+        public string CLI_APELLIDOS { get; set; }
+        public string CLI_NOMBRES { get; set; }
         public string CLI_GENERO { get; set; }
-        public string CLI_TIPO_DNI { get; set; }
-        public string CLI_DNI { get; set; }
-        public string CLI_TELEF_FIJO { get; set; }
-        public string CLI_TELEF_MOVIL { get; set; }
-        public string CLI_ESTADO { get; set; }
-        public System.DateTime CLI_ADD { get; set; }
+        public System.DateTime CLI_FECHANACIMIENTO { get; set; }
+        public string CLI_TELEFONO { get; set; }
+        public string CLI_CELULAR { get; set; }
+        public string CLI_EMAIL { get; set; }
+        public string CLI_STATUS { get; set; }
+        public System.DateTime CLI_FECHACREACION { get; set; }
     
-        public virtual TBL_DIRECCION TBL_DIRECCION { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<TBL_DIRECCIONES> TBL_DIRECCIONES { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<TBL_PEDIDO> TBL_PEDIDO { get; set; }
     }

@@ -12,17 +12,15 @@ namespace ecommerce.WebASP.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class TBL_PAGOS
+    public partial class TBL_DETALLEIMPUESTO
     {
-        public decimal PAG_ID { get; set; }
-        public Nullable<decimal> FPA_ID { get; set; }
-        public Nullable<decimal> PED_ID { get; set; }
-        public Nullable<System.DateTime> PAG_FECHA { get; set; }
-        public Nullable<decimal> PAG_VALOR { get; set; }
-        public string PAGO_STATUS { get; set; }
-        public Nullable<System.DateTime> PAGO_FECHACREACION { get; set; }
+        public decimal DIM_ID { get; set; }
+        public Nullable<decimal> DEO_CODIGO { get; set; }
+        public Nullable<decimal> IMP_ID { get; set; }
+        public Nullable<decimal> DIM_VALOR { get; set; }
+        public string DIM_STATUS { get; set; }
     
-        public virtual TBL_FORMAPAGO TBL_FORMAPAGO { get; set; }
-        public virtual TBL_PEDIDO TBL_PEDIDO { get; set; }
+        public virtual TBL_DETALLEPEDIDO TBL_DETALLEPEDIDO { get; set; }
+        public virtual TBL_IMPUESTO TBL_IMPUESTO { get; set; }
     }
 }

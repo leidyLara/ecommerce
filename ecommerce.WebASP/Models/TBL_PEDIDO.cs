@@ -17,25 +17,25 @@ namespace ecommerce.WebASP.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public TBL_PEDIDO()
         {
-            this.TBL_DETALLE_PEDIDO = new HashSet<TBL_DETALLE_PEDIDO>();
+            this.TBL_DETALLEPEDIDO = new HashSet<TBL_DETALLEPEDIDO>();
             this.TBL_PAGOS = new HashSet<TBL_PAGOS>();
         }
     
-        public int PEDI_ID { get; set; }
-        public Nullable<long> CLI_ID { get; set; }
-        public string PEDI_DNI { get; set; }
-        public Nullable<System.DateTime> PEDI_FECHA { get; set; }
-        public string PEDI_NUMERO { get; set; }
-        public string PEDI_DIRECCION { get; set; }
-        public string PEDI_TELEFONO { get; set; }
-        public Nullable<decimal> PEDI_SUBTOTAL { get; set; }
-        public Nullable<decimal> PEDI_TOTAL { get; set; }
-        public string PEDI_ESTADO { get; set; }
-        public System.DateTime PEDI_ADD { get; set; }
+        public decimal PED_ID { get; set; }
+        public Nullable<decimal> CLI_ID { get; set; }
+        public Nullable<System.DateTime> PED_FECHA { get; set; }
+        public Nullable<decimal> PED_SUBTOTAL { get; set; }
+        public Nullable<decimal> PED_TOTAL { get; set; }
+        public Nullable<int> PED_NUMERO { get; set; }
+        public string PED_IDENTIFICACION { get; set; }
+        public string PED_CLIENTE { get; set; }
+        public string PED_DIRECCION { get; set; }
+        public string PED_TELEFONO { get; set; }
+        public string PED_STATUS { get; set; }
     
         public virtual TBL_CLIENTE TBL_CLIENTE { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<TBL_DETALLE_PEDIDO> TBL_DETALLE_PEDIDO { get; set; }
+        public virtual ICollection<TBL_DETALLEPEDIDO> TBL_DETALLEPEDIDO { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<TBL_PAGOS> TBL_PAGOS { get; set; }
     }

@@ -12,16 +12,17 @@ namespace ecommerce.WebASP.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class TBL_DET_IMP
+    public partial class TBL_USUARIO
     {
-        public int DEPIMP_ID { get; set; }
-        public Nullable<int> DEP_ID { get; set; }
-        public Nullable<int> IMP_ID { get; set; }
-        public Nullable<decimal> DEPIMP_VALOR { get; set; }
-        public string DEPIMP_ESTADO { get; set; }
-        public System.DateTime DEPIMP_ADD { get; set; }
+        public decimal USU_ID { get; set; }
+        public Nullable<decimal> ROL_ID { get; set; }
+        public string USU_CORREO { get; set; }
+        public string USU_PASSWORD { get; set; }
+        public string USU_APELLIDOS { get; set; }
+        public string USU_NOMBRES { get; set; }
+        public string USU_STATUS { get; set; }
+        public System.DateTime USU_ADD { get; set; }
     
-        public virtual TBL_DETALLE_PEDIDO TBL_DETALLE_PEDIDO { get; set; }
-        public virtual TBL_IMPUESTOS TBL_IMPUESTOS { get; set; }
+        public virtual TBL_ROL TBL_ROL { get; set; }
     }
 }
