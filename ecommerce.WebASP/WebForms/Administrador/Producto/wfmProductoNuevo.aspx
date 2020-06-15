@@ -2,15 +2,19 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
   <%@ Register Src="~/UserControl/ucCategoria.ascx" TagName="UC_categoria" TagPrefix="Uc1" %>
     <br />
-    <table>
+    <table style="width: 939px">
         <tr>
             <td colspan="2" class="text-center">
                 <strong>Producto
             </strong>
             </td>
+            <td class="text-center" style="width: 121px">
+                &nbsp;</td>
         </tr>
         <tr>
             <td colspan="2">
+                &nbsp;</td>
+            <td style="width: 121px">
                 &nbsp;</td>
         </tr>
         <tr>
@@ -21,7 +25,7 @@
                             <asp:LinkButton ID="lknNuevo" runat="server" OnClick="lknNuevo_Click" CausesValidation="false" >Nuevo</asp:LinkButton>
                             <asp:ImageButton ID="imbNueno" runat="server"  ImageUrl="~/icons/nuevo.png" CausesValidation="false" Width="53px" Height="54px" OnClick="imbNueno_Click"/>
                         </td>
-                        <td class="text-center">
+                        <td class="text-center" style="width: 222px">
                             <asp:LinkButton ID="lknGuardar" runat="server" OnClick="lknGuardar_Click">Guardar</asp:LinkButton>
                             <asp:ImageButton ID="imbGuardar" runat="server"  ImageUrl="~/icons/guardar.png" Width="49px" Height="46px" OnClick="imbGuardar_Click"/>
                         </td>
@@ -29,16 +33,22 @@
                             &nbsp;</td>
                     </tr>
                 </table></td>
+            <td style="width: 121px">
+                &nbsp;</td>
         </tr>
         <tr>
             <td style="width: 187px">Id :</td>
             <td><asp:Label ID="lblId" runat="server" Text="lblId"></asp:Label></td>
+            <td style="width: 121px">&nbsp;</td>
         </tr>
         <tr>
             <td style="width: 187px">Categoria :</td>
             <%--<td><asp:DropDownList ID="ddlCategoria" runat="server" Height="16px" Width="124px"></asp:DropDownList></td>--%>
             <td><Uc1:UC_categoria ID="UC_categoria1" runat="server"></Uc1:UC_categoria>
             </td>
+            <td style="width: 121px"></td>
+            <td rowspan="10">
+            <img id="img" alt="" style="width:300px" /></td>
         </tr>
         <tr>
             <td style="width: 187px">Codigo :</td>
@@ -66,8 +76,8 @@
         </tr>
         <tr>
             <td style="width: 187px">Imagen :</td>
-            <td><asp:FileUpload ID="FileUploadProducto" runat="server"></asp:FileUpload>
-
+            <td><asp:FileUpload ID="FileUploadProducto" runat="server" onchange="showimagepreview(this)" Height="19px" Width="340px"></asp:FileUpload>
+            &nbsp;<asp:RequiredFieldValidator ID="RequiredFieldValidator8" ControlToValidate="FileUploadProducto" runat="server" Text="*" ErrorMessage="El campo Imagen es Requerido" style="color: #CC3300"></asp:RequiredFieldValidator>
             </td>
         </tr>
         <tr>
@@ -96,6 +106,20 @@
                 <asp:Label ID="lblMensaje" runat="server" style="color: #CC3300"></asp:Label>
                 <asp:ValidationSummary ID="ValidationSummary1" runat="server" style="color: #CC3300" />
             </td>
+            <td style="width: 121px">
+                &nbsp;</td>
         </tr>
     </table>
+    <script type="text/javascript">
+        function showimagepreview(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+                reader.onload = function (e) {
+
+                    document.getElementsByTagName("img")[0].setAttribute("src", e.target.result);
+                }
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+    </script>
 </asp:Content>
